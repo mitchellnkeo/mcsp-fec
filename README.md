@@ -43,3 +43,4 @@ It uses vite as the module bundler and dotenv for configuration. It's organized 
 - 22 NOV 23 MK - Test
 - 22 NOV 23 MK - Test #2
 - 22 NOV 23 MK - Test for author validation. 
+- 22 NOV 23 MK - Fourth test for this validation. 
