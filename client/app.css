@@ -6,7 +6,7 @@ body {
   padding: 8px;
 }
 
-.task {
+.deck {
   display: flex;
   align-items: center;
   border: 1px solid black;
@@ -14,10 +14,10 @@ body {
   max-width: 200px;
 }
 
-.task + .task {
+.deck + .deck {
   margin-top: 4px;
 }
 
-.task > * + * {
+.deck > * + * {
   margin-left: 4px;
 }

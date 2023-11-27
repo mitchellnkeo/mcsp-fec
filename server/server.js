@@ -16,11 +16,24 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/api/tasks", (req, res) => {
-  client.query("SELECT * FROM tasks").then((rows) => {
-    res.send(rows);
-  });
+app.get("/decks", (req, res) => {
+  client
+    .query("SELECT * FROM decks")
+    .then((result) => {
+      const rows = result.rows;
+      res.send(rows);
+    })
+    .catch((error) => {
+      console.error("Error executing query:", error);
+      res.status(500).send("Internal Server Error");
+    });
 });
+
+// app.get("/decks", (req, res) => {
+//   client.query("SELECT * FROM decks").then((rows) => {
+//     res.send(rows);
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
