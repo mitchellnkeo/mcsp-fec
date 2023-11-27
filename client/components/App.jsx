@@ -3,34 +3,28 @@ import React, { useEffect, useState } from "react";
 const App = () => {
   const [decks, setDecks] = useState([]);
 
-  useEffect(() => {
-    fetch("/decks")
+  const fetchDecks = () => {
+    fetch("/api/decks")
       .then((res) => res.json())
       .then((decks) => {
         setDecks(decks);
-      });
+      })
+      .catch((error) => console.error("Error fetching :", error));
+  };
+
+  useEffect(() => {
+    fetchDecks();
   }, []);
+  console.log(decks);
 
   return (
-    <main>
+    <div>
       {decks.map((deck) => (
         <span className="deck" key={deck.id}>
           {deck.description}
         </span>
       ))}
-      <p>
-        Hello, I've been trying to reach you about your vehicles extended
-        warranty
-      </p>
-      <p>
-        Hello, I've been trying to reach you about your vehicles extended
-        warranty
-      </p>
-      <p>
-        Hello, I've been trying to reach you about your vehicles extended
-        warranty. Radda radda Radda radda.
-      </p>
-    </main>
+    </div>
   );
 };
 
