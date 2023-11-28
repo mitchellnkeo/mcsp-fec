@@ -3,19 +3,8 @@ import React, { useEffect, useState } from "react";
 const Decks = () => {
   const [decks, setDecks] = useState([]);
 
-  useEffect(() => {
-    fetch("/FEC/decks")
-      .then((res) => res.json())
-      .then((decks) => {
-        setDecks(decks);
-      })
-      .catch((error) => {
-        console.error("Error fetching decks:", error);
-      });
-  }, []);
-
   const handleDeckClick = (deckNumber) => {
-    fetch(`/FEC/decks/${deckNumber}`)
+    fetch(`/api/decks/${deckNumber}`)
       .then((response) => response.json())
       .then((data) => console.log(data))
       .catch((error) => console.error("Error fetching deck:", error));
@@ -64,6 +53,19 @@ const Decks = () => {
   const containerStyle = {
     marginTop: "200px",
     textAlign: "center",
+  };
+
+  useEffect(() => {
+    fetchDecks(); // Call fetchDecks function within the component
+  }, []);
+
+  const fetchDecks = () => {
+    fetch("/api/decks")
+      .then((res) => res.json())
+      .then((decks) => {
+        setDecks(decks);
+      })
+      .catch((error) => console.error("Error fetching decks:", error));
   };
 
   return (

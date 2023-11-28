@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="about-box">
       <h1>About Galvanize Vocab</h1>
       <p>
         The brilliant minds at Operation Level Up, fueled by caffeine and the
