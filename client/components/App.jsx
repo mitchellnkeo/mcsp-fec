@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../app.css";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
@@ -18,13 +19,17 @@ const App = () => {
   console.log(decks);
 
   return (
-    <div>
+    <>
+    <div id="header"></div>
+    <div id="main-content">
       {decks.map((deck) => (
         <span className="deck" key={deck.id}>
           {deck.description}
         </span>
       ))}
     </div>
+    <div id="footer"></div>
+    </>
   );
 };
 
