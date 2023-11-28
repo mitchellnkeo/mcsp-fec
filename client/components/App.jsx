@@ -9,18 +9,18 @@ const App = () => {
   const [decks, setDecks] = useState([]);
   const [currentContent, setCurrentContent] = useState("home");
 
-  const fetchDecks = () => {
-    fetch("/api/decks")
-      .then((res) => res.json())
-      .then((decks) => {
-        setDecks(decks);
-      })
-      .catch((error) => console.error("Error fetching:", error));
-  };
+//   const fetchDecks = () => {
+//     fetch("/api/decks")
+//       .then((res) => res.json())
+//       .then((decks) => {
+//         setDecks(decks);
+//       })
+//       .catch((error) => console.error("Error fetching:", error));
+//   };
 
-  useEffect(() => {
-    fetchDecks();
-  }, []);
+//   useEffect(() => {
+//     fetchDecks();
+//   }, []);
 
   const handleContentChange = (content) => {
     // Content based on the button click
@@ -54,7 +54,7 @@ const App = () => {
         </div>
       </div>
       <div id="footer"></div>
-    </div>
+    <>
   );
 };
 
