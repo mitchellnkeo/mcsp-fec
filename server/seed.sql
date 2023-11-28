@@ -1,15 +1,15 @@
-INSERT INTO decks(name,description) VALUES('Basic-JavaScript','Basic-JavaScript VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('HTML-CSS','HTML-CSS VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('CLI-Git-Github','CLI-Git-Github VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('DOM','DOM VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('DOM-Events','DOM-Events VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('JS-Event-Loop','JS-Event-Loop VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('AJAX-&-HTTP','AJAX-&-HTTP VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('Node-FS-HTTP-Express','Node-FS-HTTP-Express VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('ES6','ES6 VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('SQL-&-REST','SQL-&-REST VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('OOP-Part_1','OOP-Part_1 VOCAB DECK');
-INSERT INTO decks(name,description) VALUES('OOP-Part_2 ','OOP-Part_2  VOCAB DECK');
+INSERT INTO decks(name,description) VALUES('Basic-JavaScript','Basic-JavaScript VOCAB DECK');--1
+INSERT INTO decks(name,description) VALUES('HTML-CSS','HTML-CSS VOCAB DECK');--2
+INSERT INTO decks(name,description) VALUES('CLI-Git-Github','CLI-Git-Github VOCAB DECK');--3
+INSERT INTO decks(name,description) VALUES('DOM','DOM VOCAB DECK');--4
+INSERT INTO decks(name,description) VALUES('DOM-Events','DOM-Events VOCAB DECK');--5
+INSERT INTO decks(name,description) VALUES('JS-Event-Loop','JS-Event-Loop VOCAB DECK');--6
+INSERT INTO decks(name,description) VALUES('AJAX-&-HTTP','AJAX-&-HTTP VOCAB DECK');--7
+INSERT INTO decks(name,description) VALUES('Node-FS-HTTP-Express','Node-FS-HTTP-Express VOCAB DECK');--8
+INSERT INTO decks(name,description) VALUES('ES6','ES6 VOCAB DECK');--9
+INSERT INTO decks(name,description) VALUES('SQL-&-REST','SQL-&-REST VOCAB DECK');--10
+INSERT INTO decks(name,description) VALUES('OOP-Part_1','OOP-Part_1 VOCAB DECK');--11
+INSERT INTO decks(name,description) VALUES('OOP-Part_2 ','OOP-Part_2  VOCAB DECK');--12
 
 
 
