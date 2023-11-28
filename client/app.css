@@ -24,7 +24,7 @@ body {
 
 #header {
   top: 0;
-  background-color: #E07552;
+  background-color: #e07552;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -33,7 +33,7 @@ body {
 
 #main-content {
   margin-top: 2em;
-  background-color: #0D0F4A;
+  background-color: #0d0f4a;
   height: 90vh;
   position: relative;
   width: 98%;
@@ -44,9 +44,92 @@ body {
 
 #footer {
   bottom: 0;
-  background-color: #E2EAF7;
+  background-color: #e2eaf7;
   position: fixed;
   width: 100%;
   height: 20%;
   z-index: 1;
+
 }
+body {
+  margin: 0;
+}
+
+.main {
+  padding: 8px;
+}
+
+.deck {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 2px;
+  max-width: 200px;
+}
+
+.deck + .deck {
+  margin-top: 4px;
+}
+
+.deck > * + * {
+  margin-left: 4px;
+}
+
+.menu-box {
+  background-color: #e07552; /* Set your desired background color */
+  padding: 10px; /* Add padding for spacing */
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the navigation menu */
+.menu-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-box li {
+  display: inline-block;
+  margin-right: 25px; /* Adjust the margin as needed */
+}
+
+.header-right {
+  margin-right: 500px;
+  /*This style pushes the menu items from the right side of the screen*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e07552;
+  color: #ffff;
+}
+
+/*Below is to update the text in the menu items*/
+.menu-box li a {
+  color: #fff; /* Set the text color to white */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 20pt;
+}
+
+.about-box {
+  width: auto;
+  height: 1000px;
+  color: #fff;
+  background-color: #0d0f4a;
+  font-size: 32pt;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 10px;
+  padding: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.about-box h1 {
+  text-align: center;
+}
+
