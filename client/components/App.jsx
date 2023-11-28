@@ -28,7 +28,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <>
       <div id="header">
         <header>
           <NavigationButtons onContentChange={handleContentChange} />
@@ -54,7 +54,7 @@ const App = () => {
         </div>
       </div>
       <div id="footer"></div>
-    <>
+    </>
   );
 };
 
