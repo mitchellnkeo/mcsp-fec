@@ -104,20 +104,3 @@ footer {
   height: 20%;
   z-index: 1;
 }
-
-.galvanize-guy-png {
-  float:left;
-  padding: 5em 10em 5em 10em;
-  width: 36.625em;
-  height: 37.5em;
-  border: 1px solid white;
-}
-
-.landing-content{
-  float:right;
-  color: white;
-  border: 1px solid white;
-  font-size: 3em;
-  font-weight: bold;
-  width: 50%;
-}

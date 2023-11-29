@@ -8,15 +8,15 @@
     color: #fff;
 }
 
-.nav-buttons > button {
-    all:unset;
-    cursor:pointer;
+.nav-buttons>button {
+    all: unset;
+    cursor: pointer;
     margin-left: 2em;
 
 }
 
-.nav-buttons > button:hover {
+.nav-buttons>button:hover {
     color: #0d0f4a;
     transition: .2s ease-in-out;
-} 
+}
 

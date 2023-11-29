@@ -1,5 +1,29 @@
+.home-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4em 6em 6em 6em;
+}
 
-/* 
-.landing-content{}
-.landing-title{}
-.landing-paragraph{} */
+.galvanize-guy-png {
+    width: 36.625em;
+    height: 37.5em;
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 36.625em;
+    height: 100%;
+}
+
+.home-title {
+    width: 100%;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.home-paragraph {
+    margin-top: 2em;
+    font-size: 2em;
+    align-items: flex-end;
+}
