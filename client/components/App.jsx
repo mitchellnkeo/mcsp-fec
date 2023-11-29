@@ -29,21 +29,21 @@ const App = () => {
 
   return (
     <>
-        <header>
-          <NavigationButtons onContentChange={handleContentChange} />
-        </header>
+      <header>
+        <NavigationButtons onContentChange={handleContentChange} />
+      </header>
 
-        <div className="content-container">
-          {currentContent === "home" && (
-              <Home />
-          )}
-          {currentContent === "about" && (
-              <About />
-          )}
-          {currentContent === "decks" && (
-              <Decks decks={decks} fetchDecks={fetchDecks} />
-          )}
+      <div className="content-container">
+        <div className="galvanize-vocab-graphic">
+          <img src="Galvanize_logo.svg" />
+          <img src="Vocab_logo.svg" />
         </div>
+        {currentContent === "home" && <Home />}
+        {currentContent === "about" && <About />}
+        {currentContent === "decks" && (
+          <Decks decks={decks} fetchDecks={fetchDecks} />
+        )}
+      </div>
       <footer></footer>
     </>
   );
