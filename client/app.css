@@ -69,3 +69,7 @@ footer {
   padding-left: 5em;
   padding-top: .5em;
 }
+
+.navigation-menu{ 
+  all:unset;
+}

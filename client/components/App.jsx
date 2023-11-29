@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../app.css";
 import Decks from "./Decks";
-import NavigationButtons from "./NavigationButtons";
+import Navigation from "./Navigation";
 import About from "./About";
 import Home from "./Home";
 
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <>
       <header>
-        <NavigationButtons onContentChange={handleContentChange} />
+        <Navigation onContentChange={handleContentChange} />
       </header>
 
       <div className="content-container">
