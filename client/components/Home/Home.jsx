@@ -2,9 +2,14 @@ import React from "react";
 
 const Home = () => {
   return (
-    <p>
-      This is Home Page content. The content when you first land on the page.
-    </p>
+    <>
+    <img className="galvanize-guy-png" src="galvanize-dude.png" />
+
+    <div className="landing-content">
+    <div className="landing-title">Transforming Vocabulary Study</div>
+    <div className="landing-paragraph"></div>
+    </div>
+    </>
   );
 };
 

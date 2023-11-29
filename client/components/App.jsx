@@ -37,12 +37,13 @@ const App = () => {
       </header>
 
       <div className="content-container">
+
         <div className="galvanize-vocab-graphic">
-          <img src="Galvanize_logo.svg" />
-          <img src="Vocab_logo.svg" />
+          <img src="galvanize-logo.svg" />
+          <img src="vocab-logo.svg" />
         </div>
 
-   
+         
         {currentContent === "about" && <About />}
         {currentContent === "home" && <Home />}
         {currentContent === "decks" && (
