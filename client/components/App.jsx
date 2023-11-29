@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../app.css";
-import Decks from "./Decks";
-import Navigation from "./Navigation";
+
+
+import Navigation from "./Navigation/Navigation.jsx";
 import About from "./About";
-import Home from "./Home";
+import Home from "./Home/Home.jsx";
+import Decks from "./Decks";
+
+import "../app.css";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
@@ -38,8 +41,10 @@ const App = () => {
           <img src="Galvanize_logo.svg" />
           <img src="Vocab_logo.svg" />
         </div>
-        {currentContent === "home" && <Home />}
+
+   
         {currentContent === "about" && <About />}
+        {currentContent === "home" && <Home />}
         {currentContent === "decks" && (
           <Decks decks={decks} fetchDecks={fetchDecks} />
         )}

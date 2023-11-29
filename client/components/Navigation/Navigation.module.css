@@ -1,0 +1,22 @@
+.nav-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    margin-top: .2em;
+    width: 80%;
+    font-size: 1em;
+    color: #fff;
+}
+
+.nav-buttons > button {
+    all:unset;
+    cursor:pointer;
+    margin-left: 2em;
+
+}
+
+.nav-buttons > button:hover {
+    color: #0d0f4a;
+    transition: .2s ease-in-out;
+} 
+
