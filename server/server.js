@@ -35,6 +35,7 @@ app.get("/api/deck/:id", (req, res) => {
     .then((data) => {
       if (data.rows.length == 0) {
         res.sendStatus(404);
+        return;
       }
       res.json(data.rows);
     })
