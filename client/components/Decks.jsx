@@ -51,7 +51,6 @@ const Decks = () => {
   };
 
   const containerStyle = {
-    marginTop: "200px",
     textAlign: "center",
   };
 
