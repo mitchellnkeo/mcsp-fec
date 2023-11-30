@@ -9,3 +9,7 @@
   display: inline-block;
   border-radius: 15px;
 }
+
+.container-style {
+  text-align: center;
+}

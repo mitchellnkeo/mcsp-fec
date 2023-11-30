@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import Navigation from "./Navigation/Navigation.jsx";
-import About from "./About";
-
+import About from "./About.jsx";
 import Home from "./Home/Home.jsx";
-import Decks from "./Decks";
+import Deck from "./Deck/Deck.jsx";
+import Question from "./Question.jsx";
+import Answer from "./Answer.jsx";
 
 import "../app.css";
-
-//import Home from "./Home";
-import Question from "./Question";
-import Answer from "./Answer";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
@@ -25,6 +22,9 @@ const App = () => {
       .catch((error) => console.error("Error fetching:", error));
   };
 
+
+  console.log('decks from app', decks)
+
   useEffect(() => {
     fetchDecks();
   }, []);
@@ -32,6 +32,28 @@ const App = () => {
   const handleContentChange = (content) => {
     // Content based on the button click
     setCurrentContent(content);
+  };
+
+  const mainContent = () => {
+    switch (currentContent) {
+      case "about":
+        return <About />;
+      case "home":
+        return <Home />;
+      case "decks":
+        return <Deck decks={decks} fetchDecks={fetchDecks} />;
+      case "question":
+        return <Question />;
+      case "answer":
+        return (
+          <div className="answer-box">
+            <Answer />
+            <button className="answer-button-right">YOUR_TEXT_HERE</button>
+          </div>
+        );
+      default:
+        return <Home />;
+    }
   };
 
   return (
@@ -45,24 +67,7 @@ const App = () => {
             <img src="galvanize-logo.svg" />
             <img src="vocab-logo.svg" />
           </div>
-
-          {currentContent === "about" && <About />}
-          {currentContent === "home" && <Home />}
-          {currentContent === "decks" && (
-            <Decks decks={decks} fetchDecks={fetchDecks} />
-          )}
-          {currentContent === "question" && (
-            <div className="reveal-box">
-              <Question />
-              <button className="reveal-button">REVEAL ANSWER</button>
-            </div>
-          )}
-          {currentContent === "answer" && (
-            <div className="answer-box">
-              <Answer />
-              <button className="answer-button-right">YOUR_TEXT_HERE</button>
-            </div>
-          )}
+          {mainContent()}
         </div>
       </div>
       <footer></footer>
