@@ -27,3 +27,109 @@
     font-size: 2em;
     align-items: flex-end;
 }
+
+/* 90% */
+
+@media screen and (max-width: 1600px) {
+
+    .home-container {
+        margin: 3.6em 5.4em 5.4em 5.4em;
+    }
+
+    .galvanize-guy-png {
+        width: 32.425em;
+        height: 33.4em;
+    }
+
+    .home-text-container {
+        width: 32.5em;
+    }
+
+    .home-title {
+        font-size: 2.7em;
+    }
+
+    .home-paragraph {
+        margin-top: 1.8em;
+        font-size: 1.8em;
+    }
+}
+
+/* 80% */
+
+@media screen and (max-width: 1400px) {
+    .home-container {
+        margin: 3.2em 4.8em 4.8em 4.8em;
+    }
+
+    .galvanize-guy-png {
+        width: 28.8em;
+        height: 29.5em;
+    }
+
+    .home-text-container {
+        width: 28.625em;
+    }
+
+    .home-title {
+        font-size: 2.4em;
+    }
+
+    .home-paragraph {
+        margin-top: 1.6em;
+        font-size: 1.6em;
+    }
+}
+
+/* 70% */
+
+@media screen and (max-width: 1200px) {
+    .home-container {
+        margin: 2.8em 4.2em 4.2em 4.2em;
+    }
+
+    .galvanize-guy-png {
+        width: 25.625em;
+        height: 25.5em;
+    }
+
+    .home-text-container {
+        width: 25.625em;
+    }
+
+    .home-title {
+        font-size: 2.1em;
+    }
+
+    .home-paragraph {
+        margin-top: 1.4em;
+        font-size: 1.4em;
+    }
+}
+
+/* 60% */
+
+@media screen and (max-width: 1000px) {
+    .home-container {
+        margin: 2.4em 3.6em 3.6em 3.6em;
+    }
+
+    .galvanize-guy-png {
+        width: 21.625em;
+        height: 22.5em;
+    }
+
+    .home-text-container {
+        width: 21.625em;
+        height: 100%;
+    }
+
+    .home-title {
+        font-size: 1.8em;
+    }
+
+    .home-paragraph {
+        margin-top: 1.2em;
+        font-size: 1.2em;
+    }
+}
