@@ -18,6 +18,8 @@ const Question = ({ flashcards }) => {
   };
 
   return (
+    <div className="reveal-box">
+
     <div className="question-container">
       <h4 className="question-q">Q</h4>
       <div className="question-box">
@@ -40,6 +42,7 @@ const Question = ({ flashcards }) => {
         </button>
       )}
       {revealAnswer && <Answer answer={flashcards[currentCardIndex].answer} />}
+    </div>
     </div>
   );
 };

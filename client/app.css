@@ -86,17 +86,6 @@ footer {
   z-index: 1;
 }
 
-.mainContent {
-  margin-top: 2em;
-  background-color: #0d0f4a;
-  height: 90vh;
-  position: relative;
-  width: 98%;
-  z-index: 2;
-  color: white;
-  border-radius: 0 15px 15px 0;
-}
-
 .footer {
   bottom: 0;
   background-color: #e2eaf7;
