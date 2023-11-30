@@ -135,17 +135,3 @@ footer {
   color: white;
   font-size: 20pt;
 }
-
-/**/
-/*CONTAINERS*/
-.menu-container {
-  text-align: right;
-  margin-right: 300px;
-  font-family: "Poppins", sans-serif;
-  font-size: 1em;
-  color: white;
-}
-
-.content-container {
-  padding-top: 10em;
-}
