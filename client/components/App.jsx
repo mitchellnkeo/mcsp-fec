@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 
-
 import Navigation from "./Navigation/Navigation.jsx";
 import About from "./About";
+
 import Home from "./Home/Home.jsx";
 import Decks from "./Decks";
 
 import "../app.css";
+
+//import Home from "./Home";
+import Question from "./Question";
+import Answer from "./Answer";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
@@ -35,20 +39,31 @@ const App = () => {
       <header>
         <Navigation onContentChange={handleContentChange} />
       </header>
+      <div id="main-content">
+        <div className="content-container">
+          <div className="galvanize-vocab-graphic">
+            <img src="galvanize-logo.svg" />
+            <img src="vocab-logo.svg" />
+          </div>
 
-      <div className="content-container">
-
-        <div className="galvanize-vocab-graphic">
-          <img src="galvanize-logo.svg" />
-          <img src="vocab-logo.svg" />
+          {currentContent === "about" && <About />}
+          {currentContent === "home" && <Home />}
+          {currentContent === "decks" && (
+            <Decks decks={decks} fetchDecks={fetchDecks} />
+          )}
+          {currentContent === "question" && (
+            <div className="reveal-box">
+              <Question />
+              <button className="reveal-button">REVEAL ANSWER</button>
+            </div>
+          )}
+          {currentContent === "answer" && (
+            <div className="answer-box">
+              <Answer />
+              <button className="answer-button-right">YOUR_TEXT_HERE</button>
+            </div>
+          )}
         </div>
-
-         
-        {currentContent === "about" && <About />}
-        {currentContent === "home" && <Home />}
-        {currentContent === "decks" && (
-          <Decks decks={decks} fetchDecks={fetchDecks} />
-        )}
       </div>
       <footer></footer>
     </>

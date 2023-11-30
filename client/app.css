@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'poppins';
+  font-family: "poppins";
 }
 
 .main {
@@ -15,11 +15,11 @@ body {
   max-width: 200px;
 }
 
-.deck+.deck {
+.deck + .deck {
   margin-top: 4px;
 }
 
-.deck>*+* {
+.deck > * + * {
   margin-left: 4px;
 }
 
@@ -54,22 +54,23 @@ footer {
 
 .about-box {
   width: auto;
+  height: 20em;
   color: #fff;
   font-size: 32pt;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 10px;
-  padding: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 0.5em;
+  padding: 1em;
+  font-family: "Poppins", sans-serif;
 }
 
 .about-box h1 {
-  text-align: center
+  text-align: center;
 }
 
 .galvanize-vocab-graphic {
   padding-left: 5em;
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 
 .navigation-menu {
@@ -78,7 +79,7 @@ footer {
 
 .header {
   top: 0;
-  background-color: #E07552;
+  background-color: #e07552;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -87,7 +88,7 @@ footer {
 
 .mainContent {
   margin-top: 2em;
-  background-color: #0D0F4A;
+  background-color: #0d0f4a;
   height: 90vh;
   position: relative;
   width: 98%;
@@ -98,9 +99,53 @@ footer {
 
 .footer {
   bottom: 0;
-  background-color: #E2EAF7;
+  background-color: #e2eaf7;
   position: fixed;
   width: 100%;
   height: 20%;
   z-index: 1;
+}
+.reveal-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .nav-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  margin-right: 1em;
+  font-size: 20pt;
+} */
+
+.reveal-button {
+  align-self: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 2em;
+  margin: 10px;
+  font-family: "Poppins", sans-serif;
+  background-color: #e07552;
+  color: white;
+  font-size: 20pt;
+}
+
+/**/
+/*CONTAINERS*/
+.menu-container {
+  text-align: right;
+  margin-right: 300px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  color: white;
+}
+
+.content-container {
+  padding-top: 10em;
 }

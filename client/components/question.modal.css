@@ -1,0 +1,16 @@
+.question-q {
+  font-size: 70pt;
+  margin: 0;
+  align-self: flex-start;
+  padding: 0.5em;
+}
+
+.question-container {
+  border-radius: 1em;
+  font-family: "Poppins", sans-serif;
+  font-size: 32pt;
+  color: #0d0f4a;
+  background-color: white;
+  margin: 0 auto;
+  justify-content: center;
+}
