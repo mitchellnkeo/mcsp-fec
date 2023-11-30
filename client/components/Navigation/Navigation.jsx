@@ -1,13 +1,13 @@
-import React from "react";
-
 import styles from "./Navigation.module.css";
 
-const Navigation = ({ onContentChange }) => {
+const Navigation = ({ handleView }) => {
+
+
   return (
     <div className={styles["nav-buttons"]}>
-      <button onClick={() => onContentChange("decks")}>DECKS</button>
-      <button onClick={() => onContentChange("home")}>HOME</button>
-      <button onClick={() => onContentChange("about")}>ABOUT</button>
+      <button onClick={() => handleView("decks")}>DECKS</button>
+      <button onClick={() => handleView("home")}>HOME</button>
+      <button onClick={() => handleView("about")}>ABOUT</button>
     </div>
   );
 };

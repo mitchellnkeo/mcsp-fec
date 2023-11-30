@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
-
 import Navigation from "./Navigation/Navigation.jsx";
-import About from "./About.jsx";
-import Home from "./Home/Home.jsx";
-import Deck from "./Deck/Deck.jsx";
-import Question from "./Question.jsx";
-import Answer from "./Answer.jsx";
-
+import MainContent from "./MainContent/MainContent.jsx";
 import "../app.css";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
-  const [currentContent, setCurrentContent] = useState("home");
+  const [cardData, setCardData] = useState([]);
+  const [currentView, setCurrentView] = useState("home");
+
+  let handleView = (view) => {
+    setCurrentView(view);
+  };
 
   const fetchDecks = () => {
     fetch("/api/decks")
@@ -22,44 +21,24 @@ const App = () => {
       .catch((error) => console.error("Error fetching:", error));
   };
 
-
-  console.log('decks from app', decks)
+  const handleDeckClick = (deckID) => {
+    fetch(`/api/deck/${deckID}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCardData(data);
+        setCurrentView("card");
+      })
+      .catch((error) => console.error("Error fetching deck:", error));
+  };
 
   useEffect(() => {
     fetchDecks();
   }, []);
 
-  const handleContentChange = (content) => {
-    // Content based on the button click
-    setCurrentContent(content);
-  };
-
-  const mainContent = () => {
-    switch (currentContent) {
-      case "about":
-        return <About />;
-      case "home":
-        return <Home />;
-      case "decks":
-        return <Deck decks={decks} fetchDecks={fetchDecks} />;
-      case "question":
-        return <Question />;
-      case "answer":
-        return (
-          <div className="answer-box">
-            <Answer />
-            <button className="answer-button-right">YOUR_TEXT_HERE</button>
-          </div>
-        );
-      default:
-        return <Home />;
-    }
-  };
-
   return (
     <>
       <header>
-        <Navigation onContentChange={handleContentChange} />
+        <Navigation handleView={handleView} />
       </header>
       <div id="main-content">
         <div className="content-container">
@@ -67,7 +46,12 @@ const App = () => {
             <img src="galvanize-logo.svg" />
             <img src="vocab-logo.svg" />
           </div>
-          {mainContent()}
+          <MainContent
+            currentView={currentView}
+            decks={decks}
+            handleDeckClick={handleDeckClick}
+            cardData={cardData}
+          />
         </div>
       </div>
       <footer></footer>
