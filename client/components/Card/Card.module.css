@@ -1,22 +1,31 @@
 .card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    align-content: center;
-    width: 50%;
-    height: 500px;
-    background-color: black;
-    border: 1px solid black;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  width: 50%;
+  height: 500px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  color: #0d0f4a;
+  font-family: Poppins, sans-serif;
+  font-size: 32pt;
+  border-radius: 1em;
 }
-.answer-button{
-    display: flex;
-    justify-content: center;
-    margin-left: 40%;
-    text-align: center;
-    align-content: center;
-    height:5em;
-    width: 25%;
+.answer-button {
+  display: flex;
+  justify-content: center;
+  margin-left: 40%;
+  text-align: center;
+  align-content: center;
+  height: 3em;
+  width: 25%;
+  background-color: #e07552;
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-size: 20pt;
+  border-radius: 1em;
+  padding-top: 0.5em;
 }

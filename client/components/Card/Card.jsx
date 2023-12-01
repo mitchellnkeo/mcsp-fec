@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "./Card.module.css";
 
 const Card = ({ deckArr }) => {
-
   const [cardIndex, setCardIndex] = useState(0);
 
   let deckCount = deckArr.length;
@@ -16,9 +15,9 @@ const Card = ({ deckArr }) => {
       <p>{deckArr[cardIndex].question}</p>
       <br />
       <p>{deckArr[cardIndex].answer}</p>
-      <p>id: {deckArr[cardIndex].id}</p>
+      {/* <p>id: {deckArr[cardIndex].id}</p> */}
       <button className={styles["answer-button"]} onClick={handleClick}>
-        ANSWER BUTTON
+        REVEAL ANSWER
       </button>
     </div>
   );

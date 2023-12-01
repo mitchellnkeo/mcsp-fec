@@ -4,12 +4,15 @@
   width: 25%;
   height: 12.5%;
   font-family: monospace;
-  color: black;
+  color: #0d0f4a;
   background-color: white;
   display: inline-block;
   border-radius: 15px;
+  font-family: Poppins, sans-serif;
 }
 
 .container-style {
   text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 28pt;
 }
