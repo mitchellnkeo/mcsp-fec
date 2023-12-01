@@ -1,14 +1,33 @@
+import { useState } from "react";
+import styles from "./Card.module.css";
 
-import styles from './Card.module.css';
+const Card = ({ deckArr }) => {
 
-const Card = ({ cardData }) => {
-  console.log("card data", cardData);
-  console.log(cardData[0]);
+  const [cardIndex, setCardIndex] = useState(0);
 
-  let cardOne = cardData[0];
+  let deckCount = deckArr.length;
 
-  /* 
-            //   cardData.map((card, index) => (
+  let handleClick = () => {
+    if (cardIndex < deckCount - 1) setCardIndex(cardIndex + 1);
+  };
+
+  return (
+    <div className={styles.card}>
+      <p>{deckArr[cardIndex].question}</p>
+      <br />
+      <p>{deckArr[cardIndex].answer}</p>
+      <p>id: {deckArr[cardIndex].id}</p>
+      <button className={styles["answer-button"]} onClick={handleClick}>
+        ANSWER BUTTON
+      </button>
+    </div>
+  );
+};
+
+export default Card;
+
+/* 
+            //   deckArr.map((card, index) => (
         //     <div
         //       key={`card${card.id}`}
         //     >
@@ -18,14 +37,3 @@ const Card = ({ cardData }) => {
 
 
         */
-
-  return (
-    <div>
-    <p className={styles.hello}>{cardOne.question}</p>
-    <br></br>
-      <p>{cardOne.answer}</p>
-    </div>
-  );
-};
-
-export default Card;

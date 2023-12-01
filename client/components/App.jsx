@@ -5,7 +5,7 @@ import "../app.css";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
-  const [cardData, setCardData] = useState([]);
+  const [deckArr, setDeckArr] = useState([]);
   const [currentView, setCurrentView] = useState("home");
 
   let handleView = (view) => {
@@ -25,7 +25,7 @@ const App = () => {
     fetch(`/api/deck/${deckID}`)
       .then((res) => res.json())
       .then((data) => {
-        setCardData(data);
+        setDeckArr(data);
         setCurrentView("card");
       })
       .catch((error) => console.error("Error fetching deck:", error));
@@ -50,7 +50,7 @@ const App = () => {
             currentView={currentView}
             decks={decks}
             handleDeckClick={handleDeckClick}
-            cardData={cardData}
+            deckArr={deckArr}
           />
         </div>
       </div>
