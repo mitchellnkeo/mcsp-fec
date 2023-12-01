@@ -49,6 +49,7 @@ const App = () => {
           <MainContent
             currentView={currentView}
             decks={decks}
+            handleView={handleView}
             handleDeckClick={handleDeckClick}
             deckArr={deckArr}
           />
