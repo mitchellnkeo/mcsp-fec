@@ -9,8 +9,7 @@ const Deck = ({ decks, handleDeckClick }) => {
           className={styles["deck-box"]}
           onClick={() => handleDeckClick(deck.id)}
         >
-          {`Deck ${deck.id}`}
-          <p>{deck.description}</p>
+          <p className={styles["deck-description"]}>{deck.description}</p>
         </div>
       ))}
     </div>
