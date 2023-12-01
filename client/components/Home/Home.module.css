@@ -1,7 +1,7 @@
 .home-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 4em 6em 6em 6em;
+    margin: 0em 6em 6em 6em;
 }
 
 .galvanize-guy-png {
@@ -33,7 +33,7 @@
 @media screen and (max-width: 1600px) {
 
     .home-container {
-        margin: 3.6em 5.4em 5.4em 5.4em;
+        margin: 0em 5.4em 5.4em 5.4em;
     }
 
     .galvanize-guy-png {
@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 1400px) {
     .home-container {
-        margin: 3.2em 4.8em 4.8em 4.8em;
+        margin: 0em 4.8em 4.8em 4.8em;
     }
 
     .galvanize-guy-png {
@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 1200px) {
     .home-container {
-        margin: 2.8em 4.2em 4.2em 4.2em;
+        margin: 0em 4.2em 4.2em 4.2em;
     }
 
     .galvanize-guy-png {
@@ -111,7 +111,7 @@
 
 @media screen and (max-width: 1000px) {
     .home-container {
-        margin: 2.4em 3.6em 3.6em 3.6em;
+        margin: 0em 3.6em 3.6em 3.6em;
     }
 
     .galvanize-guy-png {

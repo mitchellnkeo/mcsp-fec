@@ -1,48 +1,36 @@
 import { useState } from "react";
 import styles from "./Card.module.css";
+import QuestionCard from "../QuestionCard/QuestionCard.jsx";
+import AnswerCard from "../AnswerCard/AnswerCard.jsx";
 
-const Card = ({ deckArr }) => {
+const Card = ({ deckArr, handleView }) => {
+  
   const [cardIndex, setCardIndex] = useState(0);
-  const [revealAnswer, setRevealAnswer] = useState(false);
-
-  let deckCount = deckArr.length;
+  const [isAnswer, setIsAnswer] = useState(false);
 
   let handleClick = () => {
-    if (cardIndex < deckCount - 1) {
+  
+    if (cardIndex < deckArr.length - 1) {
       setCardIndex(cardIndex + 1);
-      setRevealAnswer(false);
+      setIsAnswer(false);
+    } else {
+      handleView("decks");
     }
+
   };
 
   return (
-    <div className={styles.card}>
-      <p>{deckArr[cardIndex].question}</p>
-      {revealAnswer && <p>{deckArr[cardIndex].answer}</p>}
-      <button
-        className={styles["answer-button"]}
-        onClick={() => setRevealAnswer(true)}
-      >
-        REVEAL ANSWER
-      </button>
-      {revealAnswer && (
-        <button className={styles["next-card-button"]} onClick={handleClick}>
-          NEXT QUESTION
-        </button>
-      )}
+
+    <div className={styles['card-container']}>
+    <div>DECK TITLE</div>
+    <div className={styles['card']}>
+
+    { isAnswer ?  <AnswerCard deckArr={deckArr} cardIndex={cardIndex} setIsAnswer={setIsAnswer} handleClick={handleClick}/> : <QuestionCard deckArr={deckArr} cardIndex={cardIndex} setIsAnswer={setIsAnswer} />}
+
+    </div>
+   
     </div>
   );
 };
 
 export default Card;
-
-/* 
-            //   deckArr.map((card, index) => (
-        //     <div
-        //       key={`card${card.id}`}
-        //     >
-        //       <p>{card.question}</p>
-        //     </div>
-        //   )))
-
-
-        */
