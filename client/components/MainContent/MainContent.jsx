@@ -3,8 +3,7 @@ import Home from "../Home/Home.jsx";
 import Deck from "../Deck/Deck.jsx";
 import Card from "../Card/Card.jsx";
 
-const MainContent = ({ currentView, decks, handleDeckClick, deckArr, handleView, deckPercentages, handleCorrectAnswer, handleWrongAnswer}) => {
-  console.log(currentView);
+const MainContent = ({ currentView, decks, handleDeckClick, cardArr, handleView, deckPercentages, handleCorrectAnswer, handleWrongAnswer}) => {
 
   const changeContent = () => {
     switch (currentView) {
@@ -13,9 +12,9 @@ const MainContent = ({ currentView, decks, handleDeckClick, deckArr, handleView,
       case "home":
         return <Home />;
       case "decks":
-        return <Deck decks={decks} handleDeckClick={handleDeckClick} deckPercentages={deckPercentages} deckArr={deckArr}/>;
+        return <Deck decks={decks} handleDeckClick={handleDeckClick} deckPercentages={deckPercentages} />;
       case "card":
-        return <Card deckArr={deckArr} handleView={handleView} handleCorrectAnswer={handleCorrectAnswer} handleWrongAnswer={handleWrongAnswer} />;
+        return <Card cardArr={cardArr} handleView={handleView} handleCorrectAnswer={handleCorrectAnswer} handleWrongAnswer={handleWrongAnswer} />;
       default:
         return <Home />;
     }

@@ -1,9 +1,9 @@
 import styles from "../Card/Card.module.css";
 
-let QuestionCard = ({ deckArr, cardIndex, setIsAnswer }) => {
+let QuestionCard = ({ cardArr, cardIndex, setIsAnswer }) => {
   return (
     <>
-      <p className={styles["card-question"]}>{deckArr[cardIndex].question}</p>
+      <p className={styles["card-question"]}>{cardArr[cardIndex].question}</p>
 
       <div className={styles["response-container"]}>
         <button

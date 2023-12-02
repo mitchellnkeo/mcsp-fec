@@ -1,9 +1,10 @@
 import styles from "../Card/Card.module.css";
 
-let AnswerCard = ({ deckArr, cardIndex, handleCorrectClick, handleWrongClick }) => {
+let AnswerCard = ({ cardArr, cardIndex, handleCorrectClick, handleWrongClick }) => {
+
   return (
     <>
-      <p className={styles["card-answer"]}> {deckArr[cardIndex].answer}</p>
+      <p className={styles["card-answer"]}> {cardArr[cardIndex].answer}</p>
       <div className={styles["response-container"]}>
         <img
           className={styles["wrong-icon"]}
@@ -22,3 +23,4 @@ let AnswerCard = ({ deckArr, cardIndex, handleCorrectClick, handleWrongClick }) 
 };
 
 export default AnswerCard;
+

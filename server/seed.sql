@@ -1,3 +1,4 @@
+-- SQLBook: Code
 INSERT INTO decks(name,description) VALUES('Basic-JavaScript','Basic-JavaScript');--1
 INSERT INTO decks(name,description) VALUES('HTML-CSS','HTML-CSS');--2
 INSERT INTO decks(name,description) VALUES('CLI-Git-Github','CLI-Git-Github');--3

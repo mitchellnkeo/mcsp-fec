@@ -18,8 +18,6 @@ app.get("/api/decks", (req, res) => {
     .query("SELECT * FROM decks")
     .then((rows) => {
       // const rows = result.rows;
-
-      console.log("here");
       res.send(rows.rows);
     })
     .catch((error) => {

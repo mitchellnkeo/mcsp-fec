@@ -3,49 +3,54 @@ import styles from "./Card.module.css";
 import QuestionCard from "../QuestionCard/QuestionCard.jsx";
 import AnswerCard from "../AnswerCard/AnswerCard.jsx";
 
-const Card = ({ deckArr, handleView, handleCorrectAnswer, handleWrongAnswer, deckPercentages} ) => {
+const Card = ({ cardArr, handleView, handleCorrectAnswer, handleWrongAnswer, deckPercentages} ) => {
 
   const [cardIndex, setCardIndex] = useState(0);
   const [isAnswer, setIsAnswer] = useState(false);
+  const [currentQuestion, setCurrentQuestion] = useState(1);
 
   useEffect(() => {
-    console.log("deckPercentages")
+    
   }, [deckPercentages]);
 
 
+
+
+
   let handleCorrectClick = () => {  
+    setCurrentQuestion(currentQuestion+1);
 
     if (cardIndex === 0){
-      // console.log("local storage", localStorage);
-      if (localStorage.getItem(`deck${deckArr[0]['deck_id']}`) != null)
-      localStorage.setItem(`deck${deckArr[0]['deck_id']}`, 0);
+      
+      if (localStorage.getItem(`deck${cardArr[0]['deck_id']}`) != null)
+      localStorage.setItem(`deck${cardArr[0]['deck_id']}`, 0);
     }
 
     //handles submission,  has not correlation to correct or wrong answer
-    handleCorrectAnswer(deckArr.at(-1)["deck_id"]);
+    handleCorrectAnswer(cardArr.at(-1)["deck_id"],cardArr.length,currentQuestion);
 
-    if (cardIndex < deckArr.length - 1) {
+    if (cardIndex < cardArr.length - 1) {
       setCardIndex(cardIndex + 1);
       setIsAnswer(false);
     } else {
       handleView("decks");
     }
   };
-  // console.log("local storage", localStorage);
+ 
 
 
   let handleWrongClick = () => {
-
+    setCurrentQuestion(currentQuestion+1);
     if (cardIndex === 0){
-        // console.log("local storage", localStorage);
-      if (localStorage.getItem(`deck${deckArr[0]['deck_id']}`) != null)
-      localStorage.setItem(`deck${deckArr[0]['deck_id']}`, 0);
-      handleWrongAnswer(deckArr.at(-1)["deck_id"])
+      
+      if (localStorage.getItem(`deck${cardArr[0]['deck_id']}`) != null)
+      localStorage.setItem(`deck${cardArr[0]['deck_id']}`, 0);
+      handleWrongAnswer(cardArr.at(-1)["deck_id"], cardArr.length,currentQuestion)
     }
 
     
 
-    if (cardIndex < deckArr.length - 1) {
+    if (cardIndex < cardArr.length - 1) {
       setCardIndex(cardIndex + 1);
       setIsAnswer(false);
     } else {
@@ -65,7 +70,7 @@ const Card = ({ deckArr, handleView, handleCorrectAnswer, handleWrongAnswer, dec
         {isAnswer ? (
 
           <AnswerCard
-            deckArr={deckArr}
+          cardArr={cardArr}
             cardIndex={cardIndex}
             handleCorrectClick={handleCorrectClick}
             handleWrongClick={handleWrongClick}
@@ -73,7 +78,7 @@ const Card = ({ deckArr, handleView, handleCorrectAnswer, handleWrongAnswer, dec
         ) : (
 
           <QuestionCard
-            deckArr={deckArr}
+          cardArr={cardArr}
             cardIndex={cardIndex}
             setIsAnswer={setIsAnswer}
           />
