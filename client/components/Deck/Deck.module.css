@@ -16,6 +16,7 @@
   background-color: white;
   display: inline-block;
   border-radius: 15px;
+  transition: .2s ease-in-out;
 }
 
 .deck-description {

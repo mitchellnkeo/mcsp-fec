@@ -1,6 +1,8 @@
+import styles from "./About.module.css"
+
 const About = () => {
   return (
-    <div className="about-box">
+    <div className={styles["about-box"]}>
       <h1>About Galvanize Vocab</h1>
       <p>
         The brilliant minds at Operation Level Up, fueled by caffeine and the

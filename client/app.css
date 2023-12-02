@@ -52,22 +52,6 @@ footer {
   border-radius: 0 15px 15px 0;
 }
 
-.about-box {
-  width: auto;
-  height: 20em;
-  color: #fff;
-  font-size: 32pt;
-  margin-left: 10em;
-  margin-right: 10em;
-  margin-top: 0.5em;
-  padding: 1em;
-  font-family: "Poppins", sans-serif;
-}
-
-.about-box h1 {
-  text-align: center;
-}
-
 .galvanize-vocab-graphic {
   padding-left: 5em;
   padding-top: 0.5em;

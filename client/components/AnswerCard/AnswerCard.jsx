@@ -1,20 +1,20 @@
 import styles from "../Card/Card.module.css";
 
-let AnswerCard = ({ deckArr, cardIndex, setIsAnswer, handleClick }) => {
+let AnswerCard = ({ deckArr, cardIndex, handleCorrectClick, handleWrongClick }) => {
   return (
     <>
-      <p className={styles["card-answer"]}>{deckArr[cardIndex].answer}</p>
+      <p className={styles["card-answer"]}> {deckArr[cardIndex].answer}</p>
       <div className={styles["response-container"]}>
-
         <img
           className={styles["wrong-icon"]}
           src="/wrong-icon.svg"
-          onClick={handleClick}
+          onClick={handleWrongClick}
         />
+
         <img
           className={styles["correct-icon"]}
           src="/correct-icon.svg"
-          onClick={handleClick}
+          onClick={handleCorrectClick}
         />
       </div>
     </>
