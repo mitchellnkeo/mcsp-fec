@@ -62,11 +62,21 @@ const Card = ({
     }
   };
 
+
+let currentDeckID = cardArr[cardIndex]["deck_id"];
+let currentDeckDescription;
+
+for (let deck of decks) {
+  if (deck.id === currentDeckID) {
+    currentDeckDescription = deck.description;
+  }
+}
+
   return (
     <div className={styles["card-container"]}>
       <div className={styles["card-count"]}> {currentQuestion} / {cardArr.length}</div>
       <div className={styles["card-header-container"]}>
-        <div className={styles["card-header-deck-name"]}>{decks[cardArr[0]['deck_id']].description}</div>
+        <div className={styles["card-header-deck-name"]}>{currentDeckDescription}</div>
       </div>
       <div className={styles["card"]}>
         {isAnswer ? (
