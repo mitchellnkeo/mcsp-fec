@@ -16,7 +16,7 @@ const Card = ({
   const [currentQuestion, setCurrentQuestion] = useState(1);
 
   // console.log("card arr in CARD", cardArr)
-  // console.log("decks in CARD", decks)
+
 
   useEffect(() => {}, [deckPercentages]);
 
@@ -28,7 +28,6 @@ const Card = ({
         localStorage.setItem(`deck${cardArr[0]["deck_id"]}`, 0);
     }
 
-    //handles submission,  has not correlation to correct or wrong answer
     handleCorrectAnswer(
       cardArr.at(-1)["deck_id"],
       cardArr.length,
@@ -65,9 +64,9 @@ const Card = ({
 
   return (
     <div className={styles["card-container"]}>
-      <div className={styles["card-count"]}> 1 / 26</div>
+      <div className={styles["card-count"]}> {currentQuestion} / {cardArr.length}</div>
       <div className={styles["card-header-container"]}>
-        <div className={styles["card-header-deck-name"]}>Basic-JavaScript</div>
+        <div className={styles["card-header-deck-name"]}>{decks[cardArr[0]['deck_id']].description}</div>
       </div>
       <div className={styles["card"]}>
         {isAnswer ? (
