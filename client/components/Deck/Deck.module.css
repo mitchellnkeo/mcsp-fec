@@ -1,10 +1,11 @@
-.container-style {
+.decks-container {
   text-align: center;
   font-size: 22px;
-  margin-top: -2.5em;
+  border: 2px solid white;
+  
 }
 
-.deck-box {
+.deck {
   margin: 1.2em;
   cursor: pointer;
   min-width: 350px;
@@ -23,7 +24,7 @@
   margin-top: 8%;
 }
 
-.deck-percentage-correct {
+.deck-percentage {
   width: 95%;
   display: flex;
   justify-content: flex-end;

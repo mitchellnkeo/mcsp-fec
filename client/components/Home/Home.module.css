@@ -1,4 +1,5 @@
 .home-container {
+    border: 1px solid white;
     display: flex;
     justify-content: space-evenly;
     margin: 0em 6em 6em 6em;

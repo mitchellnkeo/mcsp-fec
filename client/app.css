@@ -53,6 +53,7 @@ footer {
 }
 
 .galvanize-vocab-graphic {
+  border: 2px solid yellow;
   padding-left: 5em;
   padding-top: 0.5em;
   padding-bottom: 4em;

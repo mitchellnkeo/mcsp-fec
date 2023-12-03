@@ -1,11 +1,12 @@
-.about-box {
-    width: auto;    
-    color: #fff;
-    font-size: 15pt;
-    width: 80%;
-    margin: auto;
-  }
-  
-  .about-box h1 {
-    text-align: center;
-  }
+.about-container {
+  border: 1px solid white;
+  width: auto;
+  color: #fff;
+  font-size: 15pt;
+  width: 80%;
+  margin: auto;
+}
+
+.about-container h1 {
+  text-align: center;
+}
