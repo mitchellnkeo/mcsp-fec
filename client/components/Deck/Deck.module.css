@@ -20,13 +20,24 @@
 }
 
 .deck-description {
-  margin-top: 25%;
-  margin-bottom: 25%;
+  margin-top: 8%;
 }
+
+.deck-percentage-correct {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  color: #0D0F4A;
+  transition: .2s ease-in-out;
+}
+
 
 .deck-box:hover {
   background-color: #e07552;
   color: #fff;
-}
 
+  .deck-percentage-correct{
+    color: #fff
+  }
+}
 

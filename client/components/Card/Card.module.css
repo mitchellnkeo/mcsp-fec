@@ -5,23 +5,80 @@
   flex-direction: column;
   text-align: center;
   align-content: center;
-}
-
-.card {
-  border: 1px solid yellow;
-  height: 516px;
   width: 980px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.card-question {
-  background: 1px solid yellow;
+.card {
+  background-color: white;
+  height: 516px;
+  border-radius: 15px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+
 }
 
-.card-question-hidden {
-  display: none;
+.card-header-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  border: 1px solid white;
+  color: #fff;
 }
+
+.card-header-deck-name {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  z-index: 1;
+}
+
+.card-count {
+  /* margin-bottom: -2.5em; */
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid yellow;
+  width: 100%;
+}
+
+.card-content-group {
+  display: flex;
+  height: 100%;
+  border: 1px solid green;
+  font-size: 24px;
+}
+
+
+.card-designator {
+  border: 1px solid black;
+  font-size: 96px;
+  color: #0D0F4A;
+  width: 1.2em;
+  height: 100%;
+}
+
+.card-question {
+  border: 1px solid green;
+  width: 90%;
+  height: 60%;
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card-answer {
+  border: 1px solid green;
+  font-weight: bolder;
+  width: 90%;
+  height: 60%;
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 
 .response-container {
   display: flex;
@@ -29,16 +86,38 @@
   border: 1px solid green;
   margin-left: auto;
   margin-right: auto;
+  min-width: 200px;
   width: auto;
   height: 4em;
 }
 
+
 .response-container>img {
-  width: 2.75em;
-  height: 2.75em;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  transition: .2s ease-in-out;
+
+}
+
+.response-container>img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .reveal-answer-button {
-  width: 200px;
-  height: 3.75em;
+  all: unset;
+  width: 494px;
+  height: 65px;
+  background-color: #E07552;
+  color: white;
+  font-size: 40px;
+  border-radius: 50px;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+
+}
+
+.reveal-answer-button:hover {
+  transform: scale(1.03);
 }

@@ -98,3 +98,52 @@ footer {
   color: white;
   font-size: 20pt;
 }
+
+
+/* 90% */
+
+@media screen and (max-width: 1600px) {
+
+  .galvanize-vocab-graphic {
+    padding-left: 4.5em;
+    padding-top: 0.45em;
+    padding-bottom: 3.6em;
+  }
+
+}
+
+/* 80% */
+
+@media screen and (max-width: 1400px) {
+
+  .galvanize-vocab-graphic {
+    padding-left: 4em;
+    padding-top: 0.4em;
+    padding-bottom: 3.2em;
+  }
+
+}
+
+/* 70% */
+
+@media screen and (max-width: 1200px) {
+
+  .galvanize-vocab-graphic {
+    padding-left: 3.5em;
+    padding-top: 0.35em;
+    padding-bottom: 2.8em;
+  }
+
+}
+
+/* 60% */
+
+@media screen and (max-width: 1000px) {
+
+  .galvanize-vocab-graphic {
+    padding-left: 3em;
+    padding-top: 0.3em;
+    padding-bottom: 2.4em;
+  }
+  
+}

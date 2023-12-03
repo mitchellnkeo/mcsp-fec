@@ -14,7 +14,7 @@ const MainContent = ({ currentView, decks, handleDeckClick, cardArr, handleView,
       case "decks":
         return <Deck decks={decks} handleDeckClick={handleDeckClick} deckPercentages={deckPercentages} />;
       case "card":
-        return <Card cardArr={cardArr} handleView={handleView} handleCorrectAnswer={handleCorrectAnswer} handleWrongAnswer={handleWrongAnswer} />;
+        return <Card decks={decks} cardArr={cardArr} handleView={handleView} handleCorrectAnswer={handleCorrectAnswer} handleWrongAnswer={handleWrongAnswer} />;
       default:
         return <Home />;
     }
