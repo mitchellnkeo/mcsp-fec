@@ -10,7 +10,6 @@ body {
 .deck {
   display: flex;
   align-items: center;
-  border: 1px solid black;
   padding: 2px;
   max-width: 200px;
 }
@@ -42,7 +41,7 @@ footer {
 }
 
 .content-container {
-  margin-top: 2em;
+  margin-top: 2.5em;
   background-color: #0d0f4a;
   height: 90vh;
   position: relative;
@@ -53,14 +52,23 @@ footer {
 }
 
 .galvanize-vocab-graphic {
-  border: 2px solid yellow;
-  padding-left: 5em;
-  padding-top: 0.5em;
-  padding-bottom: 4em;
+  padding-left: 8em;
+  padding-bottom: 2em;
 }
 
-.navigation-menu {
-  all: unset;
+.galvanize-vocab-graphic > img {
+  margin-top: 1.5em;
+}
+
+.galvanize-logo{
+  height: 61px;
+  width:315px;
+}
+
+.vocab-logo{
+  height: 86px;
+  width:147px;
+  transform: rotate(-5deg);
 }
 
 .header {
@@ -80,26 +88,6 @@ footer {
   height: 20%;
   z-index: 1;
 }
-
-.reveal-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.reveal-button {
-  align-self: center;
-  padding-left: 2em;
-  padding-right: 2em;
-  border-radius: 2em;
-  margin: 10px;
-  font-family: "Poppins", sans-serif;
-  background-color: #e07552;
-  color: white;
-  font-size: 20pt;
-}
-
 
 /* 90% */
 

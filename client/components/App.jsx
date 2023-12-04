@@ -71,7 +71,6 @@ const App = () => {
       currentPercent > 99
         ? (currentPercent = 100)
         : (currentPercent = currentPercent);
-      console.log("hit last");
       localStorage.setItem(localStorageKey, Math.floor(currentPercent));
     } else {
       localStorage.setItem(localStorageKey, currentPercent);
@@ -119,8 +118,8 @@ const App = () => {
       <div id="main-content">
         <div className="content-container">
           <div className="galvanize-vocab-graphic">
-            <img src="galvanize-logo.svg" />
-            <img src="vocab-logo.svg" />
+            <img className="galvanize-logo" src="galvanize-logo.svg" />
+            <img className="vocab-logo" src="vocab-logo.svg" />
           </div>
           <MainContent
             currentView={currentView}

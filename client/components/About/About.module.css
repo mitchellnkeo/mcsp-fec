@@ -1,12 +1,46 @@
 .about-container {
-  border: 1px solid white;
   width: auto;
   color: #fff;
-  font-size: 15pt;
+  font-size: 2em;
   width: 80%;
   margin: auto;
 }
 
 .about-container h1 {
   text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 1800px) {
+
+  .about-container {
+    font-size: 1.7em;
+  }
+  
+}
+
+@media screen and (max-width: 1400px) {
+
+  .about-container {
+    font-size: 1.4em;
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+
+  .about-container {
+    font-size: 1.2em;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+
+  .about-container {
+    font-size: 1em;
+  }
+  
 }

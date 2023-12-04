@@ -1,19 +1,18 @@
 .card-container {
   display: flex;
-  border: 1px solid white;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   align-content: center;
-  width: 980px;
+  width: 61.25em;
   margin-left: auto;
   margin-right: auto;
 }
 
 .card {
   background-color: white;
-  height: 516px;
-  border-radius: 15px;
+  height: 32.25em;
+  border-radius: 0.9375em;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 
@@ -24,56 +23,48 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  border: 1px solid white;
   color: #fff;
 }
 
 .card-header-deck-name {
   margin-left: auto;
   margin-right: auto;
-  font-size: 40px;
-  z-index: 1;
+  font-size: 2.5em;
 }
 
 .card-count {
-  /* margin-bottom: -2.5em; */
-  font-size: 20px;
+  font-size: 1.25em;
   display: flex;
   justify-content: flex-end;
-  border: 1px solid yellow;
   width: 100%;
 }
 
 .card-content-group {
   display: flex;
   height: 100%;
-  border: 1px solid green;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 
 .card-designator {
-  border: 1px solid black;
-  font-size: 96px;
+  font-size: 4em;
   color: #0D0F4A;
   width: 1.2em;
   height: 100%;
 }
 
 .card-question {
-  border: 1px solid green;
   width: 90%;
-  height: 60%;
+  max-height: 60%;
   color: black;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .card-answer {
-  border: 1px solid green;
   font-weight: bolder;
   width: 90%;
-  height: 60%;
+  max-height: 60%;
   color: black;
   margin-top: auto;
   margin-bottom: auto;
@@ -83,10 +74,9 @@
 .response-container {
   display: flex;
   flex-direction: row;
-  border: 1px solid green;
   margin-left: auto;
   margin-right: auto;
-  min-width: 200px;
+  min-width: 8.3em;
   width: auto;
   height: 4em;
 }
@@ -94,8 +84,8 @@
 
 .response-container>img {
   margin: auto;
-  width: 60px;
-  height: 60px;
+  width: 3.75em;
+  height: 3.75em;
   transition: .2s ease-in-out;
 
 }
@@ -107,12 +97,12 @@
 
 .reveal-answer-button {
   all: unset;
-  width: 494px;
-  height: 65px;
+  width: 20.5em;
+  height: 2.7em;
   background-color: #E07552;
   color: white;
-  font-size: 40px;
-  border-radius: 50px;
+  font-size: 1.6em;
+  border-radius: 2em;
   transition: .2s ease-in-out;
   cursor: pointer;
 
@@ -121,3 +111,99 @@
 .reveal-answer-button:hover {
   transform: scale(1.03);
 }
+
+/* 90% */
+@media screen and (max-width: 1500px) {
+  .card-container {
+    width: 55.125em;
+  }
+
+  .card {
+    height: 29.025em;
+    border-radius: 0.84375em;
+    margin-top: 1.35em;
+    margin-bottom: 1.35em;
+  }
+
+  .card-header-deck-name {
+    font-size: 2.25em;
+  }
+
+  .card-count {
+    font-size: 1.125em;
+  }
+
+  .card-content-group {
+    font-size: 1.35em;
+  }
+
+  .card-designator {
+    font-size: 3.6em;
+    width: 1.08em;
+  }
+
+  .response-container {
+    min-width: 7.47em;
+    height: 3.6em;
+  }
+
+  .response-container>img {
+    width: 3.375em;
+    height: 3.375em;
+  }
+
+  .reveal-answer-button {
+    width: 18.45em;
+    height: 2.43em;
+    font-size: 1.44em;
+  }
+}
+
+
+/* 75% */
+@media screen and (max-width: 1000px) {
+  .card-container {
+    width: 45.9375em;
+  }
+
+  .card {
+    height: 24.1875em;
+    border-radius: 0.703125em;
+    margin-top: 1.125em;
+    margin-bottom: 1.125em;
+  }
+
+  .card-header-deck-name {
+    font-size: 1.875em;
+  }
+
+  .card-count {
+    font-size: 0.9375em;
+  }
+
+  .card-content-group {
+    font-size: 1.125em;
+  }
+
+  .card-designator {
+    font-size: 3.0em;
+    width: 0.9em;
+  }
+
+  .response-container {
+    min-width: 6.225em;
+    height: 3.0em;
+  }
+
+  .response-container>img {
+    width: 2.8125em;
+    height: 2.8125em;
+  }
+
+  .reveal-answer-button {
+    width: 15.375em;
+    height: 2.025em;
+    font-size: 1.2em;
+  }
+}
+

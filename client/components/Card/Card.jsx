@@ -15,9 +15,6 @@ const Card = ({
   const [isAnswer, setIsAnswer] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(1);
 
-  // console.log("card arr in CARD", cardArr)
-
-
   useEffect(() => {}, [deckPercentages]);
 
   let handleCorrectClick = () => {
@@ -62,21 +59,25 @@ const Card = ({
     }
   };
 
+  let currentDeckID = cardArr[cardIndex]["deck_id"];
+  let currentDeckDescription;
 
-let currentDeckID = cardArr[cardIndex]["deck_id"];
-let currentDeckDescription;
-
-for (let deck of decks) {
-  if (deck.id === currentDeckID) {
-    currentDeckDescription = deck.description;
+  for (let deck of decks) {
+    if (deck.id === currentDeckID) {
+      currentDeckDescription = deck.description;
+    }
   }
-}
 
   return (
     <div className={styles["card-container"]}>
-      <div className={styles["card-count"]}> {currentQuestion} / {cardArr.length}</div>
+      <div className={styles["card-count"]}>
+        {" "}
+        {currentQuestion} / {cardArr.length}
+      </div>
       <div className={styles["card-header-container"]}>
-        <div className={styles["card-header-deck-name"]}>{currentDeckDescription}</div>
+        <div className={styles["card-header-deck-name"]}>
+          {currentDeckDescription}
+        </div>
       </div>
       <div className={styles["card"]}>
         {isAnswer ? (

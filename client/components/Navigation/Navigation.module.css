@@ -3,8 +3,9 @@
     flex-direction: row-reverse;
     margin: auto;
     margin-top: .2em;
-    width: 80%;
-    font-size: 1em;
+    width: 72%;
+    font-size: 20px;
+    font-weight: 100;
     color: #fff;
 }
 
@@ -20,4 +21,3 @@
     color: #0d0f4a;
     transition: .2s ease-in-out;
 }
-

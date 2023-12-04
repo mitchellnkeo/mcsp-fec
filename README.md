@@ -3,9 +3,12 @@
 Render website:
 https://galvanizeflashcardsfrontend.onrender.com/
 
-This repo contains an example of a full-stack application with an express backend and a React frontend.
 
-It uses vite as the module bundler and dotenv for configuration. It's organized as a mono-repo using [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) which allows us to have our client and server in one repo.
+
+# Figma
+
+
+# For Developers
 
 > **Note**: When you run `npm install` at the root, it will install all dependencies listed in `package.json`, `server/package.json`, and `client/package.json`.
 
@@ -42,8 +45,3 @@ It uses vite as the module bundler and dotenv for configuration. It's organized 
 - `npm run dev` - Runs the server in watch mode.
 - `npm run start` - Starts the server (mainly used when deploying).
 
-
-- 22 NOV 23 MK - Test
-- 22 NOV 23 MK - Test #2
-- 22 NOV 23 MK - Test for author validation. 
-- 22 NOV 23 MK - Fourth test for this validation. 
