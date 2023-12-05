@@ -12,6 +12,10 @@ https://galvanizeflashcardsfrontend.onrender.com/
 
 > **Note**: When you run `npm install` at the root, it will install all dependencies listed in `package.json`, `server/package.json`, and `client/package.json`.
 
+# Data Visualization
+
+![Alt text](LocalStorageDiagram.png)
+
 ## Customizing the Template
 
 1. Create new repo using this one as a template.
