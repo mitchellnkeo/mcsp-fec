@@ -13,12 +13,7 @@ This project is built using a range of modern web technologies:
 # Figma
 [Link to figma prototypes](https://www.figma.com/file/Xt5caplEti9Oabgd0SoPR9/mcsp-fec?type=design&node-id=0%3A1&mode=design&t=2raNTk6dwRCgiTOA-1)
 
-
 <img src="client/public/figma-landing.png" width="60%" height="60%">
-<img src="client/public/figma-decks.png" width="60%" height="60%">
-<img src="client/public/figma-question.png" width="60%" height="60%">
-<img src="client/public/figma-answer.png" width="60%" height="60%">
-<img src="client/public/figma-percent.png" width="60%" height="60%">
 
 
 # Data Visualization
